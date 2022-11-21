@@ -1,0 +1,41 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5rem;
+  height: 12rem;
+
+  &__left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    letter-spacing: 1.1rem;
+
+    & img {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+
+  &__right {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+
+    &--search {
+      height: 3rem;
+      width: 15rem;
+      font-size: 2rem;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid var(--color-text);
+      transform: translateY(4px);
+    }
+
+    &--nav {
+      display: flex;
+      gap: 5rem;
+      color: var(--color-white);
+    }
+  }
+}
