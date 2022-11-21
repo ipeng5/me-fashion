@@ -11,7 +11,7 @@
 
 .products {
   background-color: var(--color-white);
-  padding: 0rem 15vw 15rem 15vw;
+  padding: var(--padding-page);
   display: flex;
   flex-direction: column;
   gap: 5rem;

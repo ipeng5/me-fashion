@@ -1,0 +1,44 @@
+.product-details {
+  padding: var(--padding-page);
+
+  & .btn {
+    margin-bottom: 3rem;
+  }
+}
+
+.details-container {
+  padding-top: 15rem;
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+}
+
+.details {
+  &__img {
+    background-color: var(--color-bg-card);
+    width: 40rem;
+    height: 60rem;
+  }
+
+  &__info {
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &--title {
+      font-size: 6rem;
+      font-weight: 400;
+    }
+
+    &--price {
+      font-size: 6rem;
+    }
+
+    &--guarantee {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+}

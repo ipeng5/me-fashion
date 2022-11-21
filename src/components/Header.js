@@ -20,6 +20,7 @@ export default function Header() {
         <SearchBar />
         <Navbar />
         <img src={iconCart} alt="cart" onClick={openCart} className="cart-icon" />;
+        <div className="red-dot">88</div>
       </div>
     </header>
   );

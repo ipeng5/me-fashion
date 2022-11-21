@@ -8,9 +8,10 @@
 
 :root {
   --color-bg-card: #e8e8e8;
-  --color-grey: rgb(149, 148, 148);
+  --color-grey: #959494;
   --color-text: #151515;
   --color-white: #fff;
+  --padding-page: 0rem 15vw 15rem 15vw;
 }
 
 html {
@@ -35,7 +36,6 @@ h1 {
 h2 {
   font-size: 3rem;
   margin-top: 10px;
-  text-transform: uppercase;
 }
 
 h3 {
@@ -58,4 +58,21 @@ a {
 
 .no-scroll {
   overflow: hidden;
+}
+
+.btn {
+  color: var(--color-white);
+  border: 3px solid var(--color-text);
+  background-color: var(--color-text);
+  font-size: 3rem;
+  padding: 2rem 6rem;
+  margin-top: 5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 70%;
+
+  &:hover {
+    color: var(--color-text);
+    background-color: var(--color-white);
+  }
 }

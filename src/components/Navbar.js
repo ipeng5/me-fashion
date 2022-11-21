@@ -5,13 +5,13 @@ export default function Navbar() {
   return (
     <ul className="header__right--nav">
       <Link to="/">
-        <h2>Home</h2>
+        <h2>HOME</h2>
       </Link>
       <Link to="/products">
-        <h2>Products</h2>
+        <h2>PRODUCTS</h2>
       </Link>
       <Link to="/contact">
-        <h2>Contact</h2>
+        <h2>CONTACT</h2>
       </Link>
     </ul>
   );

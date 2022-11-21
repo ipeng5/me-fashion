@@ -10,12 +10,12 @@ export default function Cart() {
     <div>
       <div className="cart__backdrop" onClick={closeCart}></div>
       <div className="cart__container">
-        <div className="cancel-icon">×</div>
-        <h2>My shopping bag</h2>
+        <div className="cancel-icon">&#215;</div>
+        <h2>MY SHOPPING BAG</h2>
         <CartItem />
         <h3 className="cart__subtotal">Subtotal: €140.00</h3>
-        <button className="cart__btn">Checkout</button>
-        <button className="cart__btn">Shop now</button>
+        <button className="btn">CHECKOUT</button>
+        <button className="btn">SHOP NOW</button>
       </div>
     </div>
   );
