@@ -1,20 +1,27 @@
+.category {
+  position: fixed;
+  width: 100%;
+  background-color: var(--color-white);
+  display: flex;
+  gap: 5rem;
+  height: 10rem;
+  align-items: center;
+  opacity: 0.9;
+}
+
 .products {
-  padding: 5rem 15vw;
+  background-color: var(--color-white);
+  padding: 0rem 15vw 15rem 15vw;
   display: flex;
   flex-direction: column;
   gap: 5rem;
-  padding-bottom: 15rem;
 
   &__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 4rem;
+    padding-top: 15rem;
   }
-}
-
-.category {
-  display: flex;
-  gap: 5rem;
 }
 
 .product-card {
