@@ -1,17 +1,15 @@
 import React from 'react';
-import Footer from '../../components/Footer';
+import '../../styles/Products.scss';
 import Category from '../../components/Category';
-import '../../styles/index.scss';
+import ProductCard from '../../components/ProductCard';
 
 export default function Products() {
   return (
-    <div>
+    <div className="products">
       <Category />
-      <div className="testa">
-        <button className="test">test</button>
+      <div className="products__container">
+        <ProductCard />
       </div>
-
-      <Footer />
     </div>
   );
 }

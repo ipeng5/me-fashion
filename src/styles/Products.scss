@@ -1,0 +1,30 @@
+.products {
+  padding: 5rem 15vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  padding-bottom: 15rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4rem;
+  }
+}
+
+.category {
+  display: flex;
+  gap: 5rem;
+}
+
+.product-card {
+  &__img {
+    background-color: var(--color-bg-card);
+    height: 55rem;
+    row-gap: 1rem;
+  }
+
+  &__name {
+    padding: 2.5rem 0 1rem 0;
+  }
+}

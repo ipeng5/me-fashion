@@ -38,6 +38,9 @@
     }
 
     &--cta {
+      position: absolute;
+      top: 50vh;
+      right: 15rem;
       color: var(--color-white);
       border: 3px solid var(--color-white);
       background-color: transparent;
@@ -45,7 +48,6 @@
       padding: 2rem 6rem;
       cursor: pointer;
       transition: 0.3s;
-      z-index: 1;
 
       &:hover {
         background-color: var(--color-white);

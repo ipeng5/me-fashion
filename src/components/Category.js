@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import '../styles/Category.scss';
 
 export default function Category() {
   return (

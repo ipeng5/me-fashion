@@ -27,12 +27,12 @@ export default function Slider() {
     setSlideIndex(index);
   };
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     nextSlide();
-  //   }, 4000);
-  //   return () => clearInterval(interval);
-  // });
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 2800);
+    return () => clearInterval(interval);
+  });
 
   return (
     <div className="container-slider">
@@ -46,11 +46,11 @@ export default function Slider() {
             />
             <div className="slide__info">
               <h1 className="slide__info--text">{obj.title}</h1>
-              <button className="slide__info--cta">SHOP NOW</button>
             </div>
           </div>
         );
       })}
+      <button className="slide__info--cta">SHOP NOW</button>
       <BtnSlider moveSlide={nextSlide} direction={'next'} />
       <BtnSlider moveSlide={prevSlide} direction={'prev'} />
 

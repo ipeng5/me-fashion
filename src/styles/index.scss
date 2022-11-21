@@ -7,7 +7,7 @@
 }
 
 :root {
-  --color-bg-card: #d3d1d1;
+  --color-bg-card: #e8e8e8;
   --color-bg-header: #ccc;
   --color-text: #151515;
   --color-white: #fff;
@@ -23,8 +23,7 @@ body {
   color: var(--color-text);
   position: relative;
   word-wrap: break-word;
-  width: 100vw;
-  height: 100vh;
+  overflow: overlay;
 }
 
 h1 {
@@ -36,41 +35,23 @@ h1 {
 h2 {
   font-size: 3rem;
   margin-top: 10px;
+  text-transform: uppercase;
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
+  text-transform: uppercase;
 }
 
 h4 {
-  font-size: 1.8rem;
-  font-weight: 300;
+  font-size: 2.8rem;
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 2.5rem;
 }
 
 a {
   color: var(--color-text);
   text-decoration: none;
-}
-
-.testa {
-  position: absolute;
-}
-
-.test {
-  color: purple;
-  border: 3px solid var(--color-white);
-  background-color: transparent;
-  font-size: 4rem;
-  padding: 2rem 6rem;
-  cursor: pointer;
-  // transition: 0.4s;
-
-  &:hover {
-    background-color: green;
-    color: red;
-  }
 }
