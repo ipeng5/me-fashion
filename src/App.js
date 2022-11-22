@@ -16,7 +16,7 @@ function App() {
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
-        </Routes>{' '}
+        </Routes>
       </BrowserRouter>
     </div>
   );

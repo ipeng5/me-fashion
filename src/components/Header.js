@@ -19,8 +19,12 @@ export default function Header() {
       <div className="header__right">
         <SearchBar />
         <Navbar />
-        <img src={iconCart} alt="cart" onClick={openCart} className="cart-icon" />;
-        <div className="red-dot">88</div>
+        <div className="cart-group">
+          <img src={iconCart} alt="cart" onClick={openCart} className="cart-icon" />;
+          <div className="red-dot" onClick={openCart}>
+            88
+          </div>
+        </div>
       </div>
     </header>
   );

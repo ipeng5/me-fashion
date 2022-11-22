@@ -34,13 +34,12 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 3.2rem;
   margin-top: 10px;
 }
 
 h3 {
-  font-size: 2.8rem;
-  text-transform: uppercase;
+  font-size: 3rem;
 }
 
 h4 {
@@ -69,7 +68,7 @@ a {
   margin-top: 5rem;
   cursor: pointer;
   transition: 0.3s;
-  width: 70%;
+  width: 60%;
 
   &:hover {
     color: var(--color-text);

@@ -3,6 +3,7 @@ import '../../styles/Home.scss';
 import dataSlider from './dataSlider';
 import BtnSlider from './BtnSlider';
 import { nanoid } from 'nanoid';
+import { Link } from 'react-router-dom';
 
 export default function Slider() {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -50,7 +51,9 @@ export default function Slider() {
           </div>
         );
       })}
-      <button className="slide__info--cta">SHOP NOW</button>
+      <Link to="/products">
+        <button className="slide__info--cta">SHOP NOW</button>
+      </Link>
       <BtnSlider moveSlide={nextSlide} direction={'next'} />
       <BtnSlider moveSlide={prevSlide} direction={'prev'} />
 
