@@ -3,10 +3,18 @@
   width: 100%;
   background-color: var(--color-white);
   display: flex;
-  gap: 5rem;
   height: 10rem;
   align-items: center;
   opacity: 0.95;
+  cursor: pointer;
+
+  & h3 {
+    padding: 1rem 3rem;
+  }
+
+  &--active {
+    background-color: var(--color-bg-card);
+  }
 }
 
 .products {

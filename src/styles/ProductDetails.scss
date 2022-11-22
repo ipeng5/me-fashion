@@ -14,10 +14,19 @@
 }
 
 .details {
+  &__img-box {
+    height: 80rem;
+    width: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--color-bg-card);
+  }
+
   &__img {
-    background-color: var(--color-bg-card);
-    width: 40rem;
-    height: 60rem;
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
   }
 
   &__info {

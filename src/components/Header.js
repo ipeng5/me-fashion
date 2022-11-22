@@ -2,7 +2,6 @@ import React from 'react';
 import logo from '../assets/logo.png';
 import Navbar from './Navbar';
 import '../styles/Header.scss';
-import SearchBar from './SearchBar';
 import { Link } from 'react-router-dom';
 import iconCart from '../assets/cart.svg';
 import { useCart } from '../context/CartContext';
@@ -17,7 +16,6 @@ export default function Header() {
         <h1>Fashion</h1>
       </Link>
       <div className="header__right">
-        <SearchBar />
         <Navbar />
         <div className="cart-group">
           <img src={iconCart} alt="cart" onClick={openCart} className="cart-icon" />;

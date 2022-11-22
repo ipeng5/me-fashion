@@ -27,16 +27,6 @@
     gap: 5rem;
     align-items: center;
 
-    &--search {
-      height: 3.5rem;
-      width: 18rem;
-      font-size: 2.2rem;
-      border: none;
-      outline: none;
-      border-bottom: 2px solid var(--color-text);
-      transform: translateY(4px);
-    }
-
     &--nav {
       display: flex;
       gap: 5rem;

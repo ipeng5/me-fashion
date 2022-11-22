@@ -1,13 +1,22 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 
-export default function Category({ categories }) {
+export default function Category({ currentCategory, changeCategory }) {
+  const categories = ["women's clothing", "men's clothing", 'jewelery', 'electronics'];
+
+  const handleClick = category => {
+    changeCategory(category);
+  };
+
   return (
     <div className="category">
       {categories.map(category => (
-        <NavLink key={category}>
-          <h3>{category[0].toUpperCase() + category.slice(1)}</h3>
-        </NavLink>
+        <div key={category}>
+          <h3
+            onClick={() => handleClick(category)}
+            className={currentCategory === category ? 'category--active' : ''}>
+            {category[0].toUpperCase() + category.slice(1)}
+          </h3>
+        </div>
       ))}
     </div>
   );
