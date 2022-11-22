@@ -4,8 +4,12 @@ import iconTwitter from '../assets/twitter.svg';
 import iconGitHub from '../assets/github.png';
 import imgContact from '../assets/contact.png';
 import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
+import Cart from '../components/Cart';
 
 export default function Contact() {
+  const { isOpen } = useCart();
+
   return (
     <div className="contact">
       <h2>WE'D LOVE TO HEAR FROM YOU</h2>
@@ -27,6 +31,7 @@ export default function Contact() {
         </Link>
       </div>
       <img src={imgContact} alt="me fashion" className="contact__img" />
+      {isOpen && <Cart />}
     </div>
   );
 }

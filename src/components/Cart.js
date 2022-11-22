@@ -4,7 +4,8 @@ import '../styles/Cart.scss';
 import CartItem from './CartItem';
 
 export default function Cart() {
-  const { closeCart } = useCart();
+  const { closeCart, cartItems } = useCart();
+  const subTotal = cartItems.reduce((total, item) => total + item.quantity * item.price, 0);
 
   return (
     <div>
@@ -13,15 +14,22 @@ export default function Cart() {
         <div className="cancel-icon" onClick={closeCart}>
           &#215;
         </div>
-        <h2>MY SHOPPING BAG</h2>
-        <CartItem />
-        <h3 className="cart__subtotal">Subtotal: €140.00</h3>
-        <button className="btn" onClick={closeCart}>
-          CHECKOUT
-        </button>
-        <button className="btn" onClick={closeCart}>
-          SHOP NOW
-        </button>
+        <h2>YOUR SHOPPING BAG</h2>
+        {cartItems.map(item => (
+          <CartItem key={item.id} item={item} />
+        ))}
+        {cartItems.length > 0 && <h3 className="cart__subtotal">Subtotal: €&nbsp;{subTotal}</h3>}
+        {cartItems.length === 0 && <h3 className="cart__subtotal">Your bag is empty!</h3>}
+        {cartItems.length > 0 && (
+          <button className="btn" onClick={closeCart}>
+            CHECKOUT
+          </button>
+        )}
+        {cartItems.length === 0 && (
+          <button className="btn" onClick={closeCart}>
+            SHOP NOW
+          </button>
+        )}
       </div>
     </div>
   );

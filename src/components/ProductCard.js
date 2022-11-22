@@ -10,7 +10,7 @@ export default function ProductCard({ products }) {
             <img src={p.image} alt="product" className="product-card__img" />
           </div>
           <p className="product-card__name">{p.title}</p>
-          <h4 className="product-card__price">€ {p.price}</h4>
+          <h4 className="product-card__price">€&nbsp;{p.price.toFixed(2)}</h4>
         </Link>
       ))}
     </>

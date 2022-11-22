@@ -7,7 +7,7 @@ import iconCart from '../assets/cart.svg';
 import { useCart } from '../context/CartContext';
 
 export default function Header() {
-  const { openCart } = useCart();
+  const { openCart, cartQuantity } = useCart();
 
   return (
     <header className="header">
@@ -19,9 +19,11 @@ export default function Header() {
         <Navbar />
         <div className="cart-group">
           <img src={iconCart} alt="cart" onClick={openCart} className="cart-icon" />;
-          <div className="red-dot" onClick={openCart}>
-            88
-          </div>
+          {cartQuantity > 0 && (
+            <div className="red-dot" onClick={openCart}>
+              {cartQuantity}
+            </div>
+          )}
         </div>
       </div>
     </header>

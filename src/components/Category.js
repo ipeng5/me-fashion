@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Category({ currentCategory, changeCategory }) {
-  const categories = ["women's clothing", "men's clothing", 'jewelery', 'electronics'];
+  const categories = ["men's clothing", "women's clothing", 'jewelery', 'electronics'];
 
   const handleClick = category => {
     changeCategory(category);

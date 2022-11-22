@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import Products from './pages/products/Products';
 import ProductDetails from './pages/products/ProductDetails';
 import Contact from './pages/Contact';
+import { useCart } from './context/CartContext';
+import Cart from './components/Cart';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -30,6 +32,8 @@ function App() {
     fetchData();
   }, []);
 
+  const { isOpen } = useCart();
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -40,6 +44,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/products/:id" element={<ProductDetails products={products} />} />
         </Routes>
+        {isOpen && <Cart products={products} />}
       </BrowserRouter>
     </div>
   );

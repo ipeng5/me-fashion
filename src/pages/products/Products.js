@@ -4,7 +4,7 @@ import Category from '../../components/Category';
 import ProductCard from '../../components/ProductCard';
 
 export default function Products({ products }) {
-  const [currentCategory, setCurrentCategory] = useState("women's clothing");
+  const [currentCategory, setCurrentCategory] = useState("men's clothing");
 
   const changeCategory = newCategory => {
     setCurrentCategory(newCategory);

@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/ProductDetails.scss';
 import iconTick from '../../assets/tick.svg';
 import { useParams } from 'react-router-dom';
+import { useCart } from '../../context/CartContext';
 
 export default function ProductDetails({ products }) {
   const { id } = useParams();
-  const [item] = products.filter(item => item.id === +id);
+  const { increaseQuantity } = useCart();
+  const [item, setItem] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(`https://fakestoreapi.com/products/${id}`);
+      const data = await res.json();
+      setItem(data);
+    };
+    fetchData();
+  }, [id]);
 
   return (
     <div className="product-details">
@@ -15,9 +26,15 @@ export default function ProductDetails({ products }) {
         </div>
         <div className="details__info">
           <h2 className="details__info--title">{item.title}</h2>
-          <h3 className="details__info--price">{item.price}</h3>
+          <h3 className="details__info--price">€&nbsp;{item.price?.toFixed(2)}</h3>
           <p className="details__info--description">{item.description}</p>
-          <button className="btn">ORDER</button>
+          <button
+            className="btn"
+            onClick={() => {
+              increaseQuantity(id, item.image, item.title, item.price);
+            }}>
+            ORDER
+          </button>
           <div className="details__info--guarantee">
             <img src={iconTick} alt="check" />
             <p>Free shipping from €20</p>
