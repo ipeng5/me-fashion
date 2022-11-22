@@ -75,3 +75,10 @@ a {
     background-color: var(--color-white);
   }
 }
+
+.loading {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}

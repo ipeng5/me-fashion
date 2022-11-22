@@ -10,23 +10,35 @@ import Cart from './components/Cart';
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const productArr = [];
     const fetchData = async () => {
-      const res = await fetch('https://fakestoreapi.com/products');
-      const data = await res.json();
-      data.map(item => {
-        productArr.push({
-          id: item.id,
-          title: item.title,
-          description: item.description,
-          category: item.category,
-          price: item.price,
-          image: item.image,
+      setIsLoading(true);
+      try {
+        const res = await fetch('https://fakestoreapi.com/products');
+        if (!res.ok) throw new Error(res.statusText);
+        const data = await res.json();
+        setIsLoading(false);
+        data.map(item => {
+          productArr.push({
+            id: item.id,
+            title: item.title,
+            description: item.description,
+            category: item.category,
+            price: item.price,
+            image: item.image,
+          });
+          return item;
         });
-        return item;
-      });
+        setError(null);
+      } catch (err) {
+        setIsLoading(false);
+        setError('Could not fetch the data');
+        console.error(err.message);
+      }
       setProducts(productArr);
     };
     fetchData();
@@ -40,7 +52,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products products={products} />} />
+          <Route
+            path="/products"
+            element={<Products products={products} isLoading={isLoading} error={error} />}
+          />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products/:id" element={<ProductDetails products={products} />} />
         </Routes>

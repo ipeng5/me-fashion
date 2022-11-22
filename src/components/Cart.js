@@ -18,7 +18,9 @@ export default function Cart() {
         {cartItems.map(item => (
           <CartItem key={item.id} item={item} />
         ))}
-        {cartItems.length > 0 && <h3 className="cart__subtotal">Subtotal: €&nbsp;{subTotal}</h3>}
+        {cartItems.length > 0 && (
+          <h3 className="cart__subtotal">Subtotal: €&nbsp;{subTotal.toFixed(2)}</h3>
+        )}
         {cartItems.length === 0 && <h3 className="cart__subtotal">Your bag is empty!</h3>}
         {cartItems.length > 0 && (
           <button className="btn" onClick={closeCart}>
