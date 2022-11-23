@@ -25,10 +25,10 @@ export default function Contact() {
         <h3>Let's connect !</h3>
         <div className="contact__social">
           <Link href="https://github.com/ipeng5" target="_blank">
-            <img src={iconGitHub} alt="github" className="contact__social--github" />
+            <img src={iconGitHub} alt="github" />
           </Link>
           <Link href="https://twitter.com/ipeng115" target="_blank">
-            <img src={iconTwitter} alt="twitter" className="contact__social--twitter" />
+            <img src={iconTwitter} alt="twitter" />
           </Link>
         </div>
       </div>

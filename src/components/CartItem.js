@@ -6,7 +6,7 @@ import iconRemove from '../assets/remove.svg';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 
-export default function CartItem({ item }) {
+export default function CartItem({ item, products }) {
   const { increaseQuantity, decreaseQuantity, removeFromCart, getItemQuantity } = useCart();
   const { closeCart } = useCart();
   const displayedTitle = item.title.length > 50 ? item.title.substring(0, 40) + '...' : item.title;

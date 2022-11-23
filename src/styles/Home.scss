@@ -2,7 +2,7 @@
 
 .container-slider {
   max-width: 100vw;
-  height: calc(100vh - 12rem);
+  height: calc(100vh - 10rem);
   margin: 0;
   position: relative;
   overflow: hidden;
@@ -36,7 +36,7 @@
   &__info {
     position: absolute;
     bottom: 38vh;
-    right: 15rem;
+    right: 10rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -44,15 +44,11 @@
 
     @include respond(tab-land) {
       bottom: 40vh;
+      right: 5rem;
     }
 
-    //  @include respond(tab-land) {
-    //   top: 60vh;
-    //   font-size: 3rem;
-    // }
-
     @include respond(phone) {
-      bottom: 25vh;
+      top: 20vh;
       right: 3rem;
     }
 
@@ -60,7 +56,7 @@
       color: var(--color-white);
       font-size: 15rem;
       text-align: right;
-      max-width: 150rem;
+      max-width: 100rem;
 
       @include respond(tab-land) {
         font-size: 12rem;
@@ -80,7 +76,7 @@
     &--cta {
       position: absolute;
       top: 60vh;
-      right: 15rem;
+      right: 12rem;
       color: var(--color-white);
       border: 3px solid var(--color-white);
       background-color: transparent;
@@ -92,13 +88,14 @@
       @include respond(tab-land) {
         top: 60vh;
         font-size: 3rem;
+        right: 7rem;
       }
 
       @include respond(phone) {
         font-size: 2rem;
         padding: 1.5rem 3rem;
         top: 72vh;
-        right: 3rem;
+        right: 5rem;
         border: 2px solid var(--color-white);
       }
 
@@ -116,8 +113,8 @@
 }
 
 .slide__btn {
-  width: 8rem;
-  height: 8rem;
+  width: 4rem;
+  height: 4rem;
   background: transparent;
   border: none;
   position: absolute;
