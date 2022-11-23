@@ -18,10 +18,10 @@ export default function Header() {
       <div className="header__right">
         <Navbar />
         <div className="cart-group">
-          <img src={iconCart} alt="cart" onClick={openCart} className="cart-icon" />;
+          <img src={iconCart} alt="cart" onClick={openCart} className="cart-icon" />
           {cartQuantity > 0 && (
             <div className="red-dot" onClick={openCart}>
-              {cartQuantity}
+              <span> {cartQuantity}</span>
             </div>
           )}
         </div>

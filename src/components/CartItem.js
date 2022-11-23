@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 export default function CartItem({ item }) {
   const { increaseQuantity, decreaseQuantity, removeFromCart, getItemQuantity } = useCart();
   const { closeCart } = useCart();
-  const displayedTitle = item.title.length > 50 ? item.title.substring(0, 50) + '...' : item.title;
+  const displayedTitle = item.title.length > 50 ? item.title.substring(0, 40) + '...' : item.title;
 
   const navigate = useNavigate();
 

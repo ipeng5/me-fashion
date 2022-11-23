@@ -1,3 +1,5 @@
+@import './mixins.scss';
+
 *,
 *::before,
 *::after {
@@ -11,12 +13,28 @@
   --color-grey: #959494;
   --color-text: #151515;
   --color-white: #fff;
-  --padding-page: 0rem 15vw 15rem 15vw;
 }
 
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  //TODO
+  // @include respond(phone) {
+  //   font-size: 50%;
+  // }
+
+  @include respond(big-desktop) {
+    font-size: 70%;
+  }
 }
 
 body {
@@ -28,26 +46,37 @@ body {
 }
 
 h1 {
-  font-size: 8rem;
+  font-size: 6rem;
   letter-spacing: 1.1rem;
   text-transform: uppercase;
+
+  @include respond(tab-land) {
+    font-size: 4rem;
+  }
 }
 
 h2 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   margin-top: 10px;
 }
 
 h3 {
-  font-size: 3rem;
-}
-
-h4 {
   font-size: 2.8rem;
 }
 
-p {
+h4 {
   font-size: 2.5rem;
+  @include respond(phone) {
+    font-size: 2.2rem;
+  }
+}
+
+p {
+  font-size: 2.2rem;
+
+  @include respond(phone) {
+    font-size: 1.8rem;
+  }
 }
 
 a {
