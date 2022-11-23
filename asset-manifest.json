@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/me-fashion/static/css/main.429d3f36.css",
-    "main.js": "/me-fashion/static/js/main.52685b06.js",
+    "main.css": "/me-fashion/static/css/main.d775ca54.css",
+    "main.js": "/me-fashion/static/js/main.63811228.js",
     "static/media/contact.png": "/me-fashion/static/media/contact.4c7feabc22a7bf97eb59.png",
     "index.html": "/me-fashion/index.html",
     "static/media/twitter.svg": "/me-fashion/static/media/twitter.50b6d405ebbc931285f5d8b4489269dd.svg",
@@ -12,11 +12,11 @@
     "static/media/left.svg": "/me-fashion/static/media/left.298e574dd6d4821bdac8ae9ad3b847ab.svg",
     "static/media/add.svg": "/me-fashion/static/media/add.46ae0e09d1132337aa923311b95c4996.svg",
     "static/media/subtract.svg": "/me-fashion/static/media/subtract.260546d7dd2eaed533a43b363180d557.svg",
-    "main.429d3f36.css.map": "/me-fashion/static/css/main.429d3f36.css.map",
-    "main.52685b06.js.map": "/me-fashion/static/js/main.52685b06.js.map"
+    "main.d775ca54.css.map": "/me-fashion/static/css/main.d775ca54.css.map",
+    "main.63811228.js.map": "/me-fashion/static/js/main.63811228.js.map"
   },
   "entrypoints": [
-    "static/css/main.429d3f36.css",
-    "static/js/main.52685b06.js"
+    "static/css/main.d775ca54.css",
+    "static/js/main.63811228.js"
   ]
 }
