@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/me-fashion/static/css/main.2e37524e.css",
+    "main.js": "/me-fashion/static/js/main.71b49488.js",
+    "static/media/contact.png": "/me-fashion/static/media/contact.4c7feabc22a7bf97eb59.png",
+    "index.html": "/me-fashion/index.html",
+    "static/media/twitter.svg": "/me-fashion/static/media/twitter.50b6d405ebbc931285f5d8b4489269dd.svg",
+    "static/media/cart.svg": "/me-fashion/static/media/cart.289218e20a579d65c77d8c51aaa4ee24.svg",
+    "static/media/tick.svg": "/me-fashion/static/media/tick.fbd0e0865125290069e7107f265ac13c.svg",
+    "static/media/remove.svg": "/me-fashion/static/media/remove.3270f2c93c8c138fa6cc69fbd18f985e.svg",
+    "static/media/right.svg": "/me-fashion/static/media/right.2b9a129a42303ec7162df191e145890c.svg",
+    "static/media/left.svg": "/me-fashion/static/media/left.298e574dd6d4821bdac8ae9ad3b847ab.svg",
+    "static/media/add.svg": "/me-fashion/static/media/add.46ae0e09d1132337aa923311b95c4996.svg",
+    "static/media/subtract.svg": "/me-fashion/static/media/subtract.260546d7dd2eaed533a43b363180d557.svg",
+    "main.2e37524e.css.map": "/me-fashion/static/css/main.2e37524e.css.map",
+    "main.71b49488.js.map": "/me-fashion/static/js/main.71b49488.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2e37524e.css",
+    "static/js/main.71b49488.js"
+  ]
+}
