@@ -1,22 +1,14 @@
 @import './mixins.scss';
 
 .product-details {
-  padding: 0rem 15vw 15rem 15vw;
+  padding: 0rem 18vw 15rem 18vw;
   position: relative;
-
-  & .btn {
-    margin-bottom: 3rem;
-
-    @include respond(phone) {
-      margin-bottom: 2rem;
-    }
-  }
 }
 
 .details-container {
   padding-top: 10rem;
   display: flex;
-  gap: 10rem;
+  gap: 5rem;
   justify-content: center;
 
   @include respond(tab-land) {
@@ -35,8 +27,9 @@
 
 .details {
   &__img-box {
-    height: 70rem;
-    width: 60rem;
+    height: 40rem;
+    width: 50rem;
+    min-width: 30rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,7 +62,7 @@
     width: 85rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.2rem;
 
     @include respond(tab-land) {
       width: 95rem;
@@ -80,20 +73,20 @@
     }
 
     & button {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      width: 50%;
+      font-size: 2.2rem;
+
       @include respond(tab-land) {
-        margin-top: 2rem;
-        font-size: 2.5rem;
+        font-size: 2rem;
         padding: 1rem;
       }
     }
 
     &--title {
-      font-size: 4rem;
       font-weight: 400;
-
-      @include respond(tab-land) {
-        font-size: 3.5rem;
-      }
 
       @include respond(phone) {
         font-size: 2.5rem;
@@ -105,7 +98,7 @@
     }
 
     &--price {
-      font-size: 5rem;
+      font-size: 4rem;
 
       @include respond(phone) {
         font-size: 3.5rem;
@@ -127,9 +120,7 @@
       gap: 2rem;
 
       & img {
-        @include respond(tab-land) {
-          width: 3rem;
-        }
+        width: 3rem;
       }
     }
   }

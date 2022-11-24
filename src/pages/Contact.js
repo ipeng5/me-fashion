@@ -20,7 +20,7 @@ export default function Contact() {
         </p>
         <h3>Call us</h3>
         <p>555-555-555</p>
-        <h3>Openning hours</h3>
+        <h3>Opening hours</h3>
         <p>We offer 24/7 customer service</p>
         <h3>Let's connect !</h3>
         <div className="contact__social">

@@ -13,7 +13,7 @@ input[type='number'] {
 }
 
 .item {
-  margin: 3rem 0;
+  margin: 1.5rem 0;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
@@ -27,13 +27,7 @@ input[type='number'] {
     gap: 1.5rem;
 
     & p {
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
-
-      @include respond(phone) {
-        font-size: 1.8rem;
-        margin-bottom: 1.2rem;
-      }
+      margin-bottom: 1rem;
 
       @include respond(phone-sm) {
         font-size: 1.5rem;
@@ -41,11 +35,11 @@ input[type='number'] {
     }
 
     &--img-box {
-      min-width: 12em;
-      max-width: 12rem;
-      min-height: 15rem;
-      max-height: 15rem;
-      border: 3px solid var(--color-bg-card);
+      min-width: 10em;
+      max-width: 10rem;
+      min-height: 12rem;
+      max-height: 12rem;
+      border: 2px solid var(--color-bg-card);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -60,23 +54,22 @@ input[type='number'] {
       }
 
       & img {
-        width: 65%;
+        width: 60%;
       }
     }
 
     &--quantity {
       display: flex;
       align-items: center;
-      gap: 1rem;
 
       @include respond(phone) {
         gap: 2px;
       }
 
       & img {
-        width: 5rem;
-        height: 5rem;
-        padding: 0.8rem;
+        width: 3.2rem;
+        height: 3.2rem;
+        padding: 0.5rem;
         cursor: pointer;
 
         @include respond(phone) {
@@ -91,16 +84,15 @@ input[type='number'] {
       }
 
       & input {
-        width: 7rem;
-        height: 4rem;
+        width: 4rem;
+        height: 3rem;
         outline: none;
         border: 2px solid var(--color-bg-card);
-        font-size: 2rem;
+        font-size: 1.6rem;
         text-align: center;
 
         @include respond(phone) {
           width: 30px;
-          font-size: 1.6rem;
           border: 1px solid var(--color-bg-card);
         }
       }
@@ -114,7 +106,7 @@ input[type='number'] {
     gap: 1rem;
 
     & img {
-      width: 5rem;
+      width: 4rem;
       padding: 1rem;
       cursor: pointer;
 
