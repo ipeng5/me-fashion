@@ -17,8 +17,10 @@ npm start
 
 - React
 - Sass
+- Framer motion
+- React Router
 - Fake Store API
 
 ## Screenshots
 
-![Me Fashion](https://i.imgur.com/L95UjuZ.png)
+![Me Fashion](https://i.imgur.com/qJsrYjq.png)
