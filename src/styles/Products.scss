@@ -4,6 +4,7 @@
   padding-left: 15vw;
   padding-right: 15vw;
   position: fixed;
+  top: 10rem;
   width: 100%;
   background-color: var(--color-white);
   display: flex;
@@ -14,12 +15,19 @@
 
   @include respond(tab-land) {
     justify-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   @include respond(phone) {
+    top: 7rem;
     padding-left: 5px;
     padding-right: 5px;
     height: 6rem;
+  }
+
+  @include respond(phone-sm) {
+    top: 5rem;
   }
 
   & h3 {
@@ -30,12 +38,11 @@
     align-items: center;
 
     @include respond(tab-port) {
-      font-size: 2rem;
+      font-size: 1.8rem;
       height: 7rem;
     }
 
     @include respond(phone) {
-      font-size: 1.8rem;
       font-weight: 500;
       height: 5rem;
       padding: 1rem;
@@ -54,6 +61,7 @@
 
 .products {
   background-color: var(--color-white);
+  margin-top: 6rem;
   padding-bottom: 15rem;
   display: flex;
   flex-direction: column;

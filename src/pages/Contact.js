@@ -6,12 +6,13 @@ import imgContact from '../assets/contact.png';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import Cart from '../components/Cart';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   const { isOpen } = useCart();
 
   return (
-    <div className="contact">
+    <motion.div className="contact" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <div className="contact__content">
         <h2>WE'D LOVE TO HEAR FROM YOU</h2>
         <p>
@@ -34,6 +35,6 @@ export default function Contact() {
       </div>
       <img src={imgContact} alt="me fashion" className="contact__img" />
       {isOpen && <Cart />}
-    </div>
+    </motion.div>
   );
 }

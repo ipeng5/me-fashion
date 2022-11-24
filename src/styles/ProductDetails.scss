@@ -1,12 +1,23 @@
 @import './mixins.scss';
 
 .product-details {
-  padding: 0rem 18vw 15rem 18vw;
+  padding: 15rem 18vw 15rem 18vw;
   position: relative;
+
+  @include respond(tab-port) {
+    padding: 15rem 10vw 10rem 10vw;
+  }
+
+  @include respond(phone) {
+    padding: 10rem 15vw 10rem 15vw;
+  }
+
+  @include respond(phone-sm) {
+    padding: 8rem 10vw 8rem 10vw;
+  }
 }
 
 .details-container {
-  padding-top: 10rem;
   display: flex;
   gap: 5rem;
   justify-content: center;
@@ -15,12 +26,10 @@
     gap: 3.5rem;
   }
 
-  @include respond(tab-port) {
+  @include respond(phone) {
     flex-direction: column;
     align-items: center;
-    padding: 4rem 0;
-  }
-  @include respond(phone) {
+
     gap: 2rem;
   }
 }
@@ -28,22 +37,23 @@
 .details {
   &__img-box {
     height: 40rem;
-    width: 50rem;
-    min-width: 30rem;
+    min-width: 25rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 3px solid var(--color-bg-card);
 
     @include respond(tab-land) {
-      height: 50rem;
+      height: 30rem;
     }
 
     @include respond(tab-port) {
-      width: 100%;
+      max-width: 250px;
+      height: 300px;
     }
 
     @include respond(phone) {
+      width: 100%;
       height: 35rem;
     }
 

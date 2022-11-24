@@ -5,8 +5,9 @@ import iconSubtract from '../assets/subtract.svg';
 import iconRemove from '../assets/remove.svg';
 import { useCart } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-export default function CartItem({ item, products }) {
+export default function CartItem({ item }) {
   const { increaseQuantity, decreaseQuantity, removeFromCart, getItemQuantity } = useCart();
   const { closeCart } = useCart();
   const displayedTitle = item.title.length > 50 ? item.title.substring(0, 40) + '...' : item.title;
@@ -19,34 +20,34 @@ export default function CartItem({ item, products }) {
   };
 
   return (
-    <>
-      <div className="item">
-        <div className="item__info">
-          <div className="item__info--img-box">
-            <img src={item.image} alt="item" onClick={handleClick} />
-          </div>
-          <div className="item__info--details">
-            <p>{displayedTitle}</p>
-            <div className="item__info--quantity">
-              <img src={iconSubtract} alt="subtract" onClick={() => decreaseQuantity(item.id)} />
-              <input
-                type="number"
-                value={item.quantity}
-                onChange={() => getItemQuantity(item.id)}
-              />
-              <img
-                src={iconAdd}
-                alt="add"
-                onClick={() => increaseQuantity(item.id, item.image, item.title, item.price)}
-              />
-            </div>
-          </div>
+    <motion.div
+      className="item"
+      exit={{
+        opacity: 0,
+        x: 200,
+        transition: { duration: 0.25, delay: 0.1 },
+      }}>
+      <div className="item__info">
+        <div className="item__info--img-box">
+          <img src={item.image} alt="item" onClick={handleClick} />
         </div>
-        <div className="item__right">
-          <p>€&nbsp;{(item.price * item.quantity).toFixed(2)}</p>
-          <img src={iconRemove} alt="remove" onClick={() => removeFromCart(item.id)} />
+        <div className="item__info--details">
+          <p>{displayedTitle}</p>
+          <div className="item__info--quantity">
+            <img src={iconSubtract} alt="subtract" onClick={() => decreaseQuantity(item.id)} />
+            <input type="number" value={item.quantity} onChange={() => getItemQuantity(item.id)} />
+            <img
+              src={iconAdd}
+              alt="add"
+              onClick={() => increaseQuantity(item.id, item.image, item.title, item.price)}
+            />
+          </div>
         </div>
       </div>
-    </>
+      <div className="item__right">
+        <p>€&nbsp;{(item.price * item.quantity).toFixed(2)}</p>
+        <img src={iconRemove} alt="remove" onClick={() => removeFromCart(item.id)} />
+      </div>
+    </motion.div>
   );
 }

@@ -3,6 +3,54 @@ import '../../styles/ProductDetails.scss';
 import iconTick from '../../assets/tick.svg';
 import { useParams } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
+import { motion } from 'framer-motion';
+
+const smallScreen = window.innerWidth < 900;
+let imgVariants = {};
+if (!smallScreen) {
+  imgVariants = {
+    initial: { opacity: 0, x: -30 },
+    animate: { opacity: 1, x: 0 },
+    exit: {
+      opacity: 0,
+      x: -30,
+      transition: { duration: 0.3, delay: 0.15 },
+    },
+  };
+} else {
+  imgVariants = {
+    initial: { opacity: 0, y: -30 },
+    animate: { opacity: 1, y: 0 },
+    exit: {
+      opacity: 0,
+      y: -30,
+      transition: { duration: 0.3, delay: 0.15 },
+    },
+  };
+}
+
+let infoVariants = {};
+if (!smallScreen) {
+  infoVariants = {
+    initial: { opacity: 0, x: 30 },
+    animate: { opacity: 1, x: 0 },
+    exit: {
+      opacity: 0,
+      x: 30,
+      transition: { duration: 0.3, delay: 0.15 },
+    },
+  };
+} else {
+  infoVariants = {
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0 },
+    exit: {
+      opacity: 0,
+      y: 30,
+      transition: { duration: 0.3, delay: 0.15 },
+    },
+  };
+}
 
 export default function ProductDetails() {
   const { id } = useParams();
@@ -36,10 +84,20 @@ export default function ProductDetails() {
       {isLoading && <h2 className="loading">Loading...</h2>}
       {!isLoading && (
         <div className="details-container">
-          <div className="details__img-box">
+          <motion.div
+            className="details__img-box"
+            variants={imgVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit">
             <img src={item.image} alt="product" className="details__img" />
-          </div>
-          <div className="details__info">
+          </motion.div>
+          <motion.div
+            className="details__info"
+            variants={infoVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit">
             <h2 className="details__info--title">{item.title}</h2>
             <h3 className="details__info--price">€&nbsp;{item.price?.toFixed(2)}</h3>
             <p className="details__info--description">{item.description}</p>
@@ -62,7 +120,7 @@ export default function ProductDetails() {
               <img src={iconTick} alt="check" />
               <p>30 days right of withdrawal</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       )}
     </div>

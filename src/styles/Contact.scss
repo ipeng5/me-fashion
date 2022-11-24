@@ -1,7 +1,8 @@
 @import './mixins.scss';
 
 .contact {
-  height: calc(100vh - 10rem);
+  height: calc(100vh - 18rem);
+  margin-top: 10rem;
   padding: 5vh 25vw;
   display: flex;
   flex-direction: column;
@@ -9,12 +10,19 @@
   justify-content: space-between;
   text-align: center;
 
+  @include respond(tab-port) {
+    padding: 5vh 20vw;
+  }
+
   @include respond(phone) {
-    height: calc(100vh - 7rem);
+    margin-top: 7rem;
+    height: calc(100vh - 14rem);
+    padding: 5vh 15vw;
   }
 
   @include respond(phone-sm) {
-    height: calc(100vh - 5rem);
+    margin-top: 5rem;
+    height: calc(100vh - 10rem);
   }
 
   & h2 {
@@ -35,12 +43,12 @@
     }
   }
   & p {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 5rem;
     max-width: 90rem;
 
     @include respond(phone) {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
     }
   }
 
@@ -50,6 +58,7 @@
     justify-content: center;
     gap: 5rem;
     margin-bottom: 5rem;
+    margin-top: 5rem;
 
     & img {
       width: 50px;
