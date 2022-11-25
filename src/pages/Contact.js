@@ -3,7 +3,6 @@ import '../styles/Contact.scss';
 import iconTwitter from '../assets/twitter.svg';
 import iconGitHub from '../assets/github.png';
 import imgContact from '../assets/contact.png';
-import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import Cart from '../components/Cart';
 import { motion } from 'framer-motion';
@@ -25,12 +24,12 @@ export default function Contact() {
         <p>We offer 24/7 customer service</p>
         <h3>Let's connect !</h3>
         <div className="contact__social">
-          <Link href="https://github.com/ipeng5" target="_blank">
+          <a href="https://github.com/ipeng5" target="_blank" rel="noreferrer">
             <img src={iconGitHub} alt="github" />
-          </Link>
-          <Link href="https://twitter.com/ipeng115" target="_blank">
+          </a>
+          <a href="https://twitter.com/ipeng115" target="_blank" rel="noreferrer">
             <img src={iconTwitter} alt="twitter" />
-          </Link>
+          </a>
         </div>
       </div>
       <img src={imgContact} alt="me fashion" className="contact__img" />
