@@ -8,7 +8,7 @@ An e-commerce page with shopping-cart capabilities
 
 ```
 git clone https://github.com/ipeng5/me-fashion.git
-cd memory-card
+cd me-fashion
 npm install
 npm start
 ```
