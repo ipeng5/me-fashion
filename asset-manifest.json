@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/me-fashion/static/css/main.f8f7b966.css",
-    "main.js": "/me-fashion/static/js/main.c2e2af7d.js",
+    "main.js": "/me-fashion/static/js/main.89852c41.js",
     "static/media/contact.png": "/me-fashion/static/media/contact.4c7feabc22a7bf97eb59.png",
     "index.html": "/me-fashion/index.html",
     "static/media/twitter.svg": "/me-fashion/static/media/twitter.50b6d405ebbc931285f5d8b4489269dd.svg",
@@ -13,10 +13,10 @@
     "static/media/add.svg": "/me-fashion/static/media/add.46ae0e09d1132337aa923311b95c4996.svg",
     "static/media/subtract.svg": "/me-fashion/static/media/subtract.260546d7dd2eaed533a43b363180d557.svg",
     "main.f8f7b966.css.map": "/me-fashion/static/css/main.f8f7b966.css.map",
-    "main.c2e2af7d.js.map": "/me-fashion/static/js/main.c2e2af7d.js.map"
+    "main.89852c41.js.map": "/me-fashion/static/js/main.89852c41.js.map"
   },
   "entrypoints": [
     "static/css/main.f8f7b966.css",
-    "static/js/main.c2e2af7d.js"
+    "static/js/main.89852c41.js"
   ]
 }
