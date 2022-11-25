@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import { motion } from 'framer-motion';
 
-const smallScreen = window.innerWidth < 900;
+const smallScreen = window.innerWidth < 600;
 let imgVariants = {};
 if (!smallScreen) {
   imgVariants = {
