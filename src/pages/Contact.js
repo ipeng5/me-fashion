@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/Contact.scss';
-import iconTwitter from '../assets/twitter.svg';
+import iconLI from '../assets/linkedin.png';
 import iconGitHub from '../assets/github.png';
 import imgContact from '../assets/contact.png';
 import { useCart } from '../context/CartContext';
@@ -11,12 +11,16 @@ export default function Contact() {
   const { isOpen } = useCart();
 
   return (
-    <motion.div className="contact" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+    <motion.div
+      className="contact"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}>
       <div className="contact__content">
         <h2>WE'D LOVE TO HEAR FROM YOU</h2>
         <p>
-          You can chat with our Virtual assistant 24/7 for answers to frequently asked questions,
-          and be put through to a live agent if you need more help.
+          You can chat with our Virtual assistant 24/7 for answers to frequently
+          asked questions, and be put through to a live agent if you need more
+          help.
         </p>
         <h3>Call us</h3>
         <p>555-555-555</p>
@@ -27,8 +31,11 @@ export default function Contact() {
           <a href="https://github.com/ipeng5" target="_blank" rel="noreferrer">
             <img src={iconGitHub} alt="github" />
           </a>
-          <a href="https://twitter.com/ipeng115" target="_blank" rel="noreferrer">
-            <img src={iconTwitter} alt="twitter" />
+          <a
+            href="https://www.linkedin.com/in/ianpeng/"
+            target="_blank"
+            rel="noreferrer">
+            <img src={iconLI} alt="LinkedIn" />
           </a>
         </div>
       </div>
