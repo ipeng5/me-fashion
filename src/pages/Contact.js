@@ -32,7 +32,7 @@ export default function Contact() {
             <img src={iconGitHub} alt="github" />
           </a>
           <a
-            href="https://www.linkedin.com/in/ianpeng/"
+            href="https://www.linkedin.com/in/-ip/"
             target="_blank"
             rel="noreferrer">
             <img src={iconLI} alt="LinkedIn" />
